@@ -120,12 +120,5 @@ void loop() {
 
 
 	}
-
-
-	//for (int i = 0; i < 10; i++)
-	//{
-	//	Serial.print(mfrc522.uid.uidByte[i], HEX);
-	//}
-
 	
 }
