@@ -38,6 +38,23 @@ void loop() {
 
 	if (digitalRead(NEWKEYBUTTON_PIN))
 	{
+		if (knownKeysAmount >= MaxKnownKeys)
+		{
+			digitalWrite(RED_PIN, HIGH);
+			delay(250);
+			digitalWrite(RED_PIN, LOW);
+			delay(250);
+			digitalWrite(RED_PIN, HIGH);
+			delay(250);
+			digitalWrite(RED_PIN, LOW);
+			delay(250);
+			digitalWrite(RED_PIN, HIGH);
+			delay(250);
+			digitalWrite(RED_PIN, LOW);
+			allowNewKey = false;
+			return;
+
+		}
 		allowNewKey = true;
 		delay(ACCESS_DELAY);
 	}
